@@ -20,6 +20,7 @@
 		C4EAC81522E4C801004A27B1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC81322E423DF004A27B1 /* Player.swift */; };
 		C4EAC81722E4E13C004A27B1 /* UnfoundTownError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC81622E4E13C004A27B1 /* UnfoundTownError.swift */; };
 		C4EAC81822E4E16A004A27B1 /* UnfoundTownError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC81622E4E13C004A27B1 /* UnfoundTownError.swift */; };
+		C4EAC81A22E94F4D004A27B1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC81922E94F4D004A27B1 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		C4EAC80E22E3D43E004A27B1 /* Expedition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expedition.swift; sourceTree = "<group>"; };
 		C4EAC81322E423DF004A27B1 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		C4EAC81622E4E13C004A27B1 /* UnfoundTownError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfoundTownError.swift; sourceTree = "<group>"; };
+		C4EAC81922E94F4D004A27B1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				C4EAC7E922E3D413004A27B1 /* LaunchScreen.storyboard */,
 				C4EAC7EC22E3D413004A27B1 /* Info.plist */,
 				C4EAC80E22E3D43E004A27B1 /* Expedition.swift */,
+				C4EAC81922E94F4D004A27B1 /* Game.swift */,
 				C4EAC81322E423DF004A27B1 /* Player.swift */,
 				C4EAC81622E4E13C004A27B1 /* UnfoundTownError.swift */,
 			);
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4EAC81422E423DF004A27B1 /* Player.swift in Sources */,
+				C4EAC81A22E94F4D004A27B1 /* Game.swift in Sources */,
 				C4EAC7E322E3D412004A27B1 /* ViewController.swift in Sources */,
 				C4EAC7E122E3D412004A27B1 /* AppDelegate.swift in Sources */,
 				C4EAC81722E4E13C004A27B1 /* UnfoundTownError.swift in Sources */,

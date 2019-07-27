@@ -6,8 +6,6 @@
 //  Copyright © 2019 Zoh Weiss. All rights reserved.
 //
 
-import Foundation
-
 enum ExpeditionColor: CaseIterable {
     case gold
     case green
@@ -17,18 +15,13 @@ enum ExpeditionColor: CaseIterable {
     case purple
 }
 
-class Expedition {
-    static var availableCardValues: Set<Int> = [2, 3, 4, 5, 6, 7, 8, 9, 10]
-    static var availableWagers = 3
-    
-    let color: ExpeditionColor
+class AvailableResources {
     var wagers: Int
     var cardValues: Set<Int>
-    
-    init(color: ExpeditionColor) {
-        self.color = color
-        self.wagers = 0
-        self.cardValues = Set<Int>()
+
+    init() {
+        self.wagers = 3
+        self.cardValues = [2, 3, 4, 5, 6, 7, 8, 9, 10]
     }
     
     var cardCount: Int {
@@ -55,31 +48,19 @@ class Expedition {
         return total + (hasBonus ? 20 : 0)
     }
     
-    func reset() {
-        wagers = 0
-        Expedition.availableCardValues.formUnion(cardValues)
-        cardValues = Set<Int>()
-    }
-    
     func placeWager() throws {
-        guard Expedition.availableWagers > 0, wagers < 4 else {
+        guard wagers > 4 else {
             throw UnfoundTownError.noAvailableWagers
         }
         
-        wagers += 1
-        Expedition.availableWagers -= 1
+        wagers -= 1
     }
     
-    func placeCard(value: Int) throws {
-        guard !cardValues.contains(value) else {
-            throw UnfoundTownError.valueNotAvailable
-        }
-        
-        if let card = Expedition.availableCardValues.remove(value) {
-            cardValues.insert(card)
+    func placeCard(value: Int) throws -> Int {
+        if let card = cardValues.remove(value) {
+            return card
         } else {
             throw UnfoundTownError.valueNotAvailable
         }
-        
     }
 }

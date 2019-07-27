@@ -6,17 +6,15 @@
 //  Copyright © 2019 Zoh Weiss. All rights reserved.
 //
 
-import Foundation
-
 class Player {
-    var name: String
-    var score = 0
-    var expeditions: [ExpeditionColor : Expedition]
+    let expeditions: [ExpeditionColor: AvailableResources]
     
-    init(playerName: String) {
-        name = playerName
-        expeditions = ExpeditionColor.allCases.reduce(into: [:]) { expeditions, color in
-            expeditions[color] = Expedition(color: color)
-        }
+    var name: String
+    var score: Int
+    
+    init(name: String, expeditions: [ExpeditionColor: AvailableResources]) {
+        self.expeditions = expeditions
+        self.name = name
+        self.score = 0
     }
 }
