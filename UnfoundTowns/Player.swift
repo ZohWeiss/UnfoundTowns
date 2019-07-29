@@ -27,7 +27,7 @@ class Player {
 
 extension Player: Hashable {
     static func == (lhs: Player, rhs: Player) -> Bool {
-        return lhs.name == rhs.name
+        return lhs.uuid == rhs.uuid
     }
     
     func hash(into hasher: inout Hasher) {

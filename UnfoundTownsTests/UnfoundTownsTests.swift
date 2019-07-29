@@ -83,23 +83,16 @@ class UnfoundTownsTests: XCTestCase {
         XCTAssertEqual(p2.name, playerName2, "Player 2 name is incorrect")
     }
     
-    func testPlayerEquatability() {
-        XCTAssertNotEqual(p1, p2, "Players are identical")
-        
-        p2 = Player(name: "Player 1")
-        XCTAssertEqual(p1, p2, "Players are not identical")
-    }
-    
     func testPlayerHashability() {
         let setUniqueNames: Set<Player> = [p1, p2]
         XCTAssert(setUniqueNames.count == 2)
-        XCTAssert(p1 !== p2)
+        XCTAssert(p1 != p2)
         
         p2 = Player(name: "Player 1")
-        let setDuplicateNames: Set<Player> = [p1, p2]
+        var setDuplicateNames: Set<Player> = [p1]
+        setDuplicateNames.insert(p2)
+        XCTAssert(p1.name == p2.name)
         XCTAssert(setDuplicateNames.count == 2, "Expected count: 2. Actual count: \(setDuplicateNames.count)")
-        XCTAssert(p1 == p2)
-        XCTAssert(p1 !== p2)
     }
     
 }
