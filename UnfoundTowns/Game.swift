@@ -8,9 +8,9 @@
 
 struct Game {
     var round: Int
+
     let player1: Player
     let player2: Player
-
     let expeditions: [ExpeditionColor: Expedition]
 
     init(player1: Player, player2: Player) {

@@ -18,8 +18,7 @@ class Player: Hashable {
     }
     
     func hash(into hasher: inout Hasher) {
-        hasher.combine(name)
-        hasher.combine(Date())
+        hasher.combine(UUID())
     }
     
     func updateScore(adding subtotal: Int) {
