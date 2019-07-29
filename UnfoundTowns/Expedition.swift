@@ -2,9 +2,11 @@
 //  Expedition.swift
 //  UnfoundTowns
 //
-//  Created by Zoh on 7/20/19.
+//  Created by Zoh on 7/28/19.
 //  Copyright © 2019 Zoh Weiss. All rights reserved.
 //
+
+import Foundation
 
 enum ExpeditionColor: CaseIterable {
     case gold
@@ -15,52 +17,60 @@ enum ExpeditionColor: CaseIterable {
     case purple
 }
 
-class AvailableResources {
-    var wagers: Int
-    var cardValues: Set<Int>
-
-    init() {
-        self.wagers = 3
-        self.cardValues = [2, 3, 4, 5, 6, 7, 8, 9, 10]
-    }
-    
-    var cardCount: Int {
-        return cardValues.count + wagers
-    }
-    
-    var hasBonus: Bool {
-        return cardCount > 7
-    }
-    
-    var expeditionStarted: Bool {
-        return cardCount != 0
-    }
-    
-    var score: Int {
-        guard expeditionStarted else { return 0 }
+class Expedition {
+    var availableCardValues: Set<Int>
+    var availableWagers: Int
+    var placedCardValues = [Player: Set<Int>]()
+    var placedWagers = [Player: Int]()
         
-        var total = cardValues.reduce(-20) { total, card in
+    init(player1: Player, player2: Player) {
+        availableCardValues = [2,3,4,5,6,7,8,9,10]                                                                                                                                                                                                                                                                                                                                                                               
+        availableWagers = 3
+        placedCardValues[player1] = Set<Int>()
+        placedCardValues[player2] = Set<Int>()
+        placedWagers[player1] = 0
+        placedWagers[player2] = 0
+    }
+    
+    func calculateScore(_ player: Player) -> Int {
+        guard didStartExpedition(player) else { return 0 }
+        
+        var total = placedCardValues[player]!.reduce(-20) { total, card in
             total + card
         }
         
-        total *= (wagers + 1)
+        total *= (placedWagers[player]! + 1)
         
-        return total + (hasBonus ? 20 : 0)
+        return total + (hasBonus(player) ? 20 : 0)
+        
     }
     
-    func placeWager() throws {
-        guard wagers > 4 else {
+    func cardCount(_ player: Player) -> Int {
+        return placedCardValues[player]!.count + placedWagers[player]!
+    }
+    
+    func didStartExpedition(_ player: Player) -> Bool {
+        return cardCount(player) != 0
+    }
+
+    func hasBonus(_ player: Player) -> Bool {
+        return cardCount(player) > 7
+    }
+    
+    func placeCard(_ player: Player, value: Int) throws {
+        guard let card = availableCardValues.remove(value) else {
+            throw UnfoundTownError.valueNotAvailable
+        }
+        
+        placedCardValues[player]!.insert(card)
+    }
+    
+    func placeWager(_ player: Player) throws {
+        guard availableWagers > 0 else {
             throw UnfoundTownError.noAvailableWagers
         }
         
-        wagers -= 1
-    }
-    
-    func placeCard(value: Int) throws -> Int {
-        if let card = cardValues.remove(value) {
-            return card
-        } else {
-            throw UnfoundTownError.valueNotAvailable
-        }
+        availableWagers -= 1
+        placedWagers[player]! += 1
     }
 }

@@ -6,15 +6,29 @@
 //  Copyright © 2019 Zoh Weiss. All rights reserved.
 //
 
-class Player {
-    let expeditions: [ExpeditionColor: AvailableResources]
-    
+import Foundation
+
+class Player: Hashable {
     var name: String
     var score: Int
     
-    init(name: String, expeditions: [ExpeditionColor: AvailableResources]) {
-        self.expeditions = expeditions
+    init(name: String) {
         self.name = name
-        self.score = 0
+        score = 0
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+        hasher.combine(Date())
+    }
+    
+    func updateScore(adding subtotal: Int) {
+        score += subtotal
+    }
+}
+
+extension Player: Equatable {
+    static func == (lhs: Player, rhs: Player) -> Bool {
+        return lhs.name == rhs.name
     }
 }

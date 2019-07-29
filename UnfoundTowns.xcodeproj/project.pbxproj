@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C420BB2622EE055300E3646B /* Expedition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C420BB2522EE055300E3646B /* Expedition.swift */; };
+		C420BB2722EEA01400E3646B /* Expedition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C420BB2522EE055300E3646B /* Expedition.swift */; };
 		C4EAC7E122E3D412004A27B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC7E022E3D412004A27B1 /* AppDelegate.swift */; };
 		C4EAC7E322E3D412004A27B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC7E222E3D412004A27B1 /* ViewController.swift */; };
 		C4EAC7E622E3D412004A27B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4EAC7E422E3D412004A27B1 /* Main.storyboard */; };
@@ -14,8 +16,6 @@
 		C4EAC7EB22E3D413004A27B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4EAC7E922E3D413004A27B1 /* LaunchScreen.storyboard */; };
 		C4EAC7F622E3D414004A27B1 /* UnfoundTownsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC7F522E3D414004A27B1 /* UnfoundTownsTests.swift */; };
 		C4EAC80122E3D414004A27B1 /* UnfoundTownsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC80022E3D414004A27B1 /* UnfoundTownsUITests.swift */; };
-		C4EAC80F22E3D43E004A27B1 /* Expedition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC80E22E3D43E004A27B1 /* Expedition.swift */; };
-		C4EAC81222E3D842004A27B1 /* Expedition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC80E22E3D43E004A27B1 /* Expedition.swift */; };
 		C4EAC81422E423DF004A27B1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC81322E423DF004A27B1 /* Player.swift */; };
 		C4EAC81522E4C801004A27B1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC81322E423DF004A27B1 /* Player.swift */; };
 		C4EAC81722E4E13C004A27B1 /* UnfoundTownError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC81622E4E13C004A27B1 /* UnfoundTownError.swift */; };
@@ -41,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C420BB2522EE055300E3646B /* Expedition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expedition.swift; sourceTree = "<group>"; };
 		C4EAC7DD22E3D412004A27B1 /* UnfoundTowns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnfoundTowns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4EAC7E022E3D412004A27B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4EAC7E222E3D412004A27B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +55,6 @@
 		C4EAC7FC22E3D414004A27B1 /* UnfoundTownsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnfoundTownsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4EAC80022E3D414004A27B1 /* UnfoundTownsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfoundTownsUITests.swift; sourceTree = "<group>"; };
 		C4EAC80222E3D414004A27B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C4EAC80E22E3D43E004A27B1 /* Expedition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expedition.swift; sourceTree = "<group>"; };
 		C4EAC81322E423DF004A27B1 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		C4EAC81622E4E13C004A27B1 /* UnfoundTownError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfoundTownError.swift; sourceTree = "<group>"; };
 		C4EAC81922E94F4D004A27B1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -114,9 +114,9 @@
 				C4EAC7E722E3D413004A27B1 /* Assets.xcassets */,
 				C4EAC7E922E3D413004A27B1 /* LaunchScreen.storyboard */,
 				C4EAC7EC22E3D413004A27B1 /* Info.plist */,
-				C4EAC80E22E3D43E004A27B1 /* Expedition.swift */,
 				C4EAC81922E94F4D004A27B1 /* Game.swift */,
 				C4EAC81322E423DF004A27B1 /* Player.swift */,
+				C420BB2522EE055300E3646B /* Expedition.swift */,
 				C4EAC81622E4E13C004A27B1 /* UnfoundTownError.swift */,
 			);
 			path = UnfoundTowns;
@@ -273,10 +273,10 @@
 			files = (
 				C4EAC81422E423DF004A27B1 /* Player.swift in Sources */,
 				C4EAC81A22E94F4D004A27B1 /* Game.swift in Sources */,
+				C420BB2622EE055300E3646B /* Expedition.swift in Sources */,
 				C4EAC7E322E3D412004A27B1 /* ViewController.swift in Sources */,
 				C4EAC7E122E3D412004A27B1 /* AppDelegate.swift in Sources */,
 				C4EAC81722E4E13C004A27B1 /* UnfoundTownError.swift in Sources */,
-				C4EAC80F22E3D43E004A27B1 /* Expedition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,8 +284,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C420BB2722EEA01400E3646B /* Expedition.swift in Sources */,
 				C4EAC81822E4E16A004A27B1 /* UnfoundTownError.swift in Sources */,
-				C4EAC81222E3D842004A27B1 /* Expedition.swift in Sources */,
 				C4EAC81522E4C801004A27B1 /* Player.swift in Sources */,
 				C4EAC7F622E3D414004A27B1 /* UnfoundTownsTests.swift in Sources */,
 			);

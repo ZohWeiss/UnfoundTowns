@@ -10,73 +10,96 @@ import XCTest
 @testable import UnfoundTowns
 
 class UnfoundTownsTests: XCTestCase {
+    
+    var p1: Player!
+    var p2: Player!
+    var expedition: Expedition!
+    
+    override func setUp() {
+        p1 = Player(name: "Player 1")
+        p2 = Player(name: "Player 2")
+        expedition = Expedition(player1: p1, player2: p2)
+    }
 
     func testMaxScore() {
-        let expedition = Expedition()
-        expedition.cardValues = [2, 3, 4, 5, 6, 7, 8, 9, 10]
-        expedition.wagers = 3
-        XCTAssertEqual(expedition.score, 156, "Max score is incorrect")
+        expedition.placedCardValues[p1] = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+        expedition.placedWagers[p1] = 3
+        XCTAssertEqual(expedition.calculateScore(p1), 156, "Max score is incorrect")
     }
     
     func testMinScore() {
-        let expedition = Expedition()
-        XCTAssertEqual(expedition.score, 0, "Min score is incorrect")
+        XCTAssertEqual(expedition.calculateScore(p1), 0, "Min score is incorrect")
     }
     
     func testBonus() {
-        let expedition = Expedition()
-        expedition.wagers = 3
-        XCTAssertFalse(expedition.hasBonus, "Expedition should not have bonus")
-        XCTAssertEqual(expedition.score, -80, "Score calculated incorrectly")
-        
-        expedition.cardValues = [2, 3, 4, 5]
-        XCTAssertFalse(expedition.hasBonus, "Expedition should not have bonus")
-        XCTAssertEqual(expedition.score, -24, "Score calculated incorrectly")
-        
-        expedition.cardValues.insert(6)
-        XCTAssert(expedition.hasBonus, "Expedition should have bonus")
-        XCTAssertEqual(expedition.score, 20, "Score calculated incorrectly")
+        expedition.placedWagers[p1] = 3
+        XCTAssertFalse(expedition.hasBonus(p1), "Expedition should not have bonus")
+        XCTAssertEqual(expedition.calculateScore(p1), -80, "Score calculated incorrectly")
+
+        expedition.placedCardValues[p1] = [2, 3, 4, 5]
+        XCTAssertFalse(expedition.hasBonus(p1), "Expedition should not have bonus")
+        XCTAssertEqual(expedition.calculateScore(p1), -24, "Score calculated incorrectly")
+
+        expedition.placedCardValues[p1]!.insert(6)
+        XCTAssert(expedition.hasBonus(p1), "Expedition should have bonus")
+        XCTAssertEqual(expedition.calculateScore(p1), 20, "Score calculated incorrectly")
     }
 
-    func testReset() {
-        let expedition = Expedition()
+    func testReinitialization() {
         for i in 2...10 {
-            try! expedition.placeCard(value: i)
+            try! expedition.placeCard(p1, value: i)
         }
-        expedition.wagers = 3
         
-        XCTAssert(expedition.expeditionStarted, "Expedition not started")
-        XCTAssert(expedition.hasBonus, "Expedition does not have bonus")
+        for _ in 1...3 {
+            try! expedition.placeWager(p1)
+        }
+
+        XCTAssert(expedition.didStartExpedition(p1), "Expedition not started")
+        XCTAssert(expedition.hasBonus(p1), "Expedition does not have bonus")
         XCTAssert(expedition.availableCardValues.isEmpty, "Incorrect available card values")
-        XCTAssertEqual(expedition.score, 156, "Max score is incorrect")
-        XCTAssertEqual(expedition.cardCount, 12, "Incorrect number of cards before reset")
-        
-        expedition.reset()
-        
-        XCTAssertFalse(expedition.expeditionStarted, "Expedition still started after reset")
-        XCTAssertFalse(expedition.hasBonus, "Bonus did not reset")
-        XCTAssertEqual(expedition.wagers, 0, "Wagers not reset")
-        XCTAssertEqual(expedition.score, 0, "Min score is incorrect")
-        XCTAssertEqual(expedition.cardCount, 0, "Card count not reset")
-        XCTAssert(expedition.cardValues.isEmpty, "Card values not emptied")
+        XCTAssertEqual(expedition.availableWagers, 0, "Wagers still available after placement")
+        XCTAssertEqual(expedition.calculateScore(p1), 156, "Max score is incorrect")
+        XCTAssertEqual(expedition.cardCount(p1), 12, "Incorrect number of cards before reset")
+
+        expedition = Expedition(player1: p1, player2: p2)
+
+        XCTAssertFalse(expedition.didStartExpedition(p1), "Expedition still started after reset")
+        XCTAssertFalse(expedition.hasBonus(p1), "Bonus did not reset")
+        XCTAssertEqual(expedition.placedWagers[p1]!, 0, "Wagers not reset")
+        XCTAssertEqual(expedition.calculateScore(p1), 0, "Min score is incorrect")
+        XCTAssertEqual(expedition.cardCount(p1), 0, "Card count not reset")
+        XCTAssert(expedition.placedCardValues[p1]!.isEmpty, "Card values not emptied")
         XCTAssertEqual(expedition.availableCardValues, [2, 3, 4, 5, 6, 7, 8, 9, 10], "Incorrect available card values after reset")
     }
-    
+
     func testPlayers() {
-        let playerName1 = "Player 1"
-        let playerName2 = "Player 2"
-        
-        let player1 = Player(playerName: playerName1)
-        let player2 = Player(playerName: playerName2)
-        
-        XCTAssertEqual(player1.name, playerName1, "Player 1 name is incorrect")
-        XCTAssertEqual(player2.name, playerName2, "Player 2 name is incorrect")
-//        XCTAssertEqual(player1.expeditions.count, 6, "Player 1 Expedition Count is incorrect")
-//        XCTAssertEqual(player2.expeditions.count, 6, "Player 2 Expedition Count is incorrect")
-        
-//        for color in ExpeditionColor.allCases {
-//            XCTAssert(player1.expeditions[color] != nil, "\(color) does not exist in Player 1 expeditions")
-//            XCTAssert(player2.expeditions[color] != nil, "\(color) does not exist in Player 2 expeditions")
-//        }
+        let playerName1 = "Zoh"
+        let playerName2 = "Stephanie"
+
+        p1 = Player(name: playerName1)
+        p2 = Player(name: playerName2)
+
+        XCTAssertEqual(p1.name, playerName1, "Player 1 name is incorrect")
+        XCTAssertEqual(p2.name, playerName2, "Player 2 name is incorrect")
     }
+    
+    func testPlayerEquatability() {
+        XCTAssertNotEqual(p1, p2, "Players are identical")
+        
+        p2 = Player(name: "Player 1")
+        XCTAssertEqual(p1, p2, "Players are not identical")
+    }
+    
+    func testPlayerHashability() {
+        let setUniqueNames: Set<Player> = [p1, p2]
+        XCTAssert(setUniqueNames.count == 2)
+        XCTAssert(p1 !== p2)
+        
+        p2 = Player(name: "Player 1")
+        let setDuplicateNames: Set<Player> = [p1, p2]
+        XCTAssert(setDuplicateNames.count == 2, "Expected count: 2. Actual count: \(setDuplicateNames.count)")
+        XCTAssert(p1 == p2)
+        XCTAssert(p1 !== p2)
+    }
+    
 }
