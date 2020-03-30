@@ -212,10 +212,12 @@
 					};
 					C4EAC7F022E3D414004A27B1 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
 						TestTargetID = C4EAC7DC22E3D412004A27B1;
 					};
 					C4EAC7FB22E3D414004A27B1 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
 						TestTargetID = C4EAC7DC22E3D412004A27B1;
 					};
 				};
@@ -494,7 +496,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoh.UnfoundTownsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UnfoundTowns.app/UnfoundTowns";
 			};
@@ -514,7 +516,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoh.UnfoundTownsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UnfoundTowns.app/UnfoundTowns";
 			};
@@ -533,7 +535,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoh.UnfoundTownsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = UnfoundTowns;
 			};
@@ -552,7 +554,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoh.UnfoundTownsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = UnfoundTowns;
 			};
