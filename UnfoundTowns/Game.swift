@@ -6,12 +6,14 @@
 //  Copyright © 2019 Zoh Weiss. All rights reserved.
 //
 
+import Foundation
+
 class Game {
     let player1: Player
     let player2: Player
     let expeditions: [ExpeditionColor: Expedition]
     
-    var round: Int
+    @objc dynamic var round: Int
 
     init(player1: Player, player2: Player) {
         self.player1 = player1
@@ -32,16 +34,22 @@ class Game {
         guard player1.score != player2.score else {
             return nil
         }
-        
+
         return player1.score > player2.score ? player1 : player2
     }
     
-    func incrementRound() {
-        guard round < 4 else {
-            // TODO: New game?
-            return
+    func endRound() {
+        if round > 3 {
+            round = 1
         }
-        
         round += 1
+    }
+    
+    func endGame() -> Player? {
+        if round == 3 {
+            defer { round = 1 }
+            return try! determineWinner()
+        }
+        return nil
     }
 }

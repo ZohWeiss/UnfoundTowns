@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		C420BB2622EE055300E3646B /* Expedition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C420BB2522EE055300E3646B /* Expedition.swift */; };
 		C420BB2722EEA01400E3646B /* Expedition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C420BB2522EE055300E3646B /* Expedition.swift */; };
+		C420BB2822F273B100E3646B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC81922E94F4D004A27B1 /* Game.swift */; };
 		C4EAC7E122E3D412004A27B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC7E022E3D412004A27B1 /* AppDelegate.swift */; };
 		C4EAC7E322E3D412004A27B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC7E222E3D412004A27B1 /* ViewController.swift */; };
-		C4EAC7E622E3D412004A27B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4EAC7E422E3D412004A27B1 /* Main.storyboard */; };
 		C4EAC7E822E3D413004A27B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4EAC7E722E3D413004A27B1 /* Assets.xcassets */; };
 		C4EAC7EB22E3D413004A27B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4EAC7E922E3D413004A27B1 /* LaunchScreen.storyboard */; };
 		C4EAC7F622E3D414004A27B1 /* UnfoundTownsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC7F522E3D414004A27B1 /* UnfoundTownsTests.swift */; };
@@ -21,6 +21,7 @@
 		C4EAC81722E4E13C004A27B1 /* UnfoundTownError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC81622E4E13C004A27B1 /* UnfoundTownError.swift */; };
 		C4EAC81822E4E16A004A27B1 /* UnfoundTownError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC81622E4E13C004A27B1 /* UnfoundTownError.swift */; };
 		C4EAC81A22E94F4D004A27B1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC81922E94F4D004A27B1 /* Game.swift */; };
+		C4F5F37524316E04009F0E59 /* UnfoundTownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5F37424316E04009F0E59 /* UnfoundTownView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +46,6 @@
 		C4EAC7DD22E3D412004A27B1 /* UnfoundTowns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnfoundTowns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4EAC7E022E3D412004A27B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4EAC7E222E3D412004A27B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C4EAC7E522E3D412004A27B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4EAC7E722E3D413004A27B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4EAC7EA22E3D413004A27B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4EAC7EC22E3D413004A27B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +58,7 @@
 		C4EAC81322E423DF004A27B1 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		C4EAC81622E4E13C004A27B1 /* UnfoundTownError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfoundTownError.swift; sourceTree = "<group>"; };
 		C4EAC81922E94F4D004A27B1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		C4F5F37424316E04009F0E59 /* UnfoundTownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfoundTownView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +111,6 @@
 			children = (
 				C4EAC7E022E3D412004A27B1 /* AppDelegate.swift */,
 				C4EAC7E222E3D412004A27B1 /* ViewController.swift */,
-				C4EAC7E422E3D412004A27B1 /* Main.storyboard */,
 				C4EAC7E722E3D413004A27B1 /* Assets.xcassets */,
 				C4EAC7E922E3D413004A27B1 /* LaunchScreen.storyboard */,
 				C4EAC7EC22E3D413004A27B1 /* Info.plist */,
@@ -118,6 +118,7 @@
 				C4EAC81322E423DF004A27B1 /* Player.swift */,
 				C420BB2522EE055300E3646B /* Expedition.swift */,
 				C4EAC81622E4E13C004A27B1 /* UnfoundTownError.swift */,
+				C4F5F37424316E04009F0E59 /* UnfoundTownView.swift */,
 			);
 			path = UnfoundTowns;
 			sourceTree = "<group>";
@@ -246,7 +247,6 @@
 			files = (
 				C4EAC7EB22E3D413004A27B1 /* LaunchScreen.storyboard in Resources */,
 				C4EAC7E822E3D413004A27B1 /* Assets.xcassets in Resources */,
-				C4EAC7E622E3D412004A27B1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +273,7 @@
 			files = (
 				C4EAC81422E423DF004A27B1 /* Player.swift in Sources */,
 				C4EAC81A22E94F4D004A27B1 /* Game.swift in Sources */,
+				C4F5F37524316E04009F0E59 /* UnfoundTownView.swift in Sources */,
 				C420BB2622EE055300E3646B /* Expedition.swift in Sources */,
 				C4EAC7E322E3D412004A27B1 /* ViewController.swift in Sources */,
 				C4EAC7E122E3D412004A27B1 /* AppDelegate.swift in Sources */,
@@ -285,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C420BB2722EEA01400E3646B /* Expedition.swift in Sources */,
+				C420BB2822F273B100E3646B /* Game.swift in Sources */,
 				C4EAC81822E4E16A004A27B1 /* UnfoundTownError.swift in Sources */,
 				C4EAC81522E4C801004A27B1 /* Player.swift in Sources */,
 				C4EAC7F622E3D414004A27B1 /* UnfoundTownsTests.swift in Sources */,
@@ -315,14 +317,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C4EAC7E422E3D412004A27B1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4EAC7E522E3D412004A27B1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C4EAC7E922E3D413004A27B1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -385,7 +379,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -440,7 +434,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -456,13 +450,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UnfoundTowns/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoh.UnfoundTowns;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -473,13 +468,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UnfoundTowns/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoh.UnfoundTowns;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
