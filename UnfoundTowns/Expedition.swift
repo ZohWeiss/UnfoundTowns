@@ -24,7 +24,7 @@ class Expedition {
     var placedWagers = [Player: Int]()
         
     init(player1: Player, player2: Player) {
-        availableCardValues = [2,3,4,5,6,7,8,9,10]                                                                                                                                                                                                                                                                                                                                                                               
+        availableCardValues = [2,3,4,5,6,7,8,9,10]
         availableWagers = 3
         placedCardValues[player1] = Set<Int>()
         placedCardValues[player2] = Set<Int>()

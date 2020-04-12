@@ -22,6 +22,7 @@
 		C4EAC81822E4E16A004A27B1 /* UnfoundTownError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC81622E4E13C004A27B1 /* UnfoundTownError.swift */; };
 		C4EAC81A22E94F4D004A27B1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC81922E94F4D004A27B1 /* Game.swift */; };
 		C4F5F37524316E04009F0E59 /* UnfoundTownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5F37424316E04009F0E59 /* UnfoundTownView.swift */; };
+		C4F5F3772431763A009F0E59 /* UnfoundTownCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5F3762431763A009F0E59 /* UnfoundTownCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		C4EAC81622E4E13C004A27B1 /* UnfoundTownError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfoundTownError.swift; sourceTree = "<group>"; };
 		C4EAC81922E94F4D004A27B1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		C4F5F37424316E04009F0E59 /* UnfoundTownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfoundTownView.swift; sourceTree = "<group>"; };
+		C4F5F3762431763A009F0E59 /* UnfoundTownCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfoundTownCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				C420BB2522EE055300E3646B /* Expedition.swift */,
 				C4EAC81622E4E13C004A27B1 /* UnfoundTownError.swift */,
 				C4F5F37424316E04009F0E59 /* UnfoundTownView.swift */,
+				C4F5F3762431763A009F0E59 /* UnfoundTownCard.swift */,
 			);
 			path = UnfoundTowns;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				C420BB2622EE055300E3646B /* Expedition.swift in Sources */,
 				C4EAC7E322E3D412004A27B1 /* ViewController.swift in Sources */,
 				C4EAC7E122E3D412004A27B1 /* AppDelegate.swift in Sources */,
+				C4F5F3772431763A009F0E59 /* UnfoundTownCard.swift in Sources */,
 				C4EAC81722E4E13C004A27B1 /* UnfoundTownError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
