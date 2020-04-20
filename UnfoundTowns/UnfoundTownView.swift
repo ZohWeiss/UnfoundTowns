@@ -10,7 +10,39 @@ import SwiftUI
 
 struct UnfoundTownView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                ForEach(1...10, id: \.self) { i in
+                    UnfoundTownCard(expeditionColor: .purple, cardValue: i, isForeground: i == 10)
+                }
+            }
+            HStack {
+                ForEach(1...10, id: \.self) { i in
+                    UnfoundTownCard(expeditionColor: .red, cardValue: i, isForeground: i == 10)
+                }
+            }
+            HStack {
+                ForEach(1...10, id: \.self) { i in
+                    UnfoundTownCard(expeditionColor: .blue, cardValue: i, isForeground: i == 10)
+                }
+            }
+            HStack {
+                ForEach(1...10, id: \.self) { i in
+                    UnfoundTownCard(expeditionColor: .green, cardValue: i, isForeground: i == 10)
+                }
+            }
+            HStack {
+                ForEach(1...10, id: \.self) { i in
+                    UnfoundTownCard(expeditionColor: .gold, cardValue: i, isForeground: i == 10)
+                }
+            }
+            HStack {
+                ForEach(1...10, id: \.self) { i in
+                    UnfoundTownCard(expeditionColor: .white, cardValue: i, isForeground: i == 10)
+                }
+                
+            }
+        }
     }
 }
 
