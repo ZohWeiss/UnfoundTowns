@@ -10,10 +10,10 @@
 		C420BB2622EE055300E3646B /* Expedition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C420BB2522EE055300E3646B /* Expedition.swift */; };
 		C420BB2722EEA01400E3646B /* Expedition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C420BB2522EE055300E3646B /* Expedition.swift */; };
 		C420BB2822F273B100E3646B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC81922E94F4D004A27B1 /* Game.swift */; };
+		C43D2F75244D225E00BDE459 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D2F74244D225E00BDE459 /* SceneDelegate.swift */; };
+		C43D2F77244D233E00BDE459 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C43D2F76244D233E00BDE459 /* LaunchScreen.storyboard */; };
 		C4EAC7E122E3D412004A27B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC7E022E3D412004A27B1 /* AppDelegate.swift */; };
-		C4EAC7E322E3D412004A27B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC7E222E3D412004A27B1 /* ViewController.swift */; };
 		C4EAC7E822E3D413004A27B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4EAC7E722E3D413004A27B1 /* Assets.xcassets */; };
-		C4EAC7EB22E3D413004A27B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4EAC7E922E3D413004A27B1 /* LaunchScreen.storyboard */; };
 		C4EAC7F622E3D414004A27B1 /* UnfoundTownsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC7F522E3D414004A27B1 /* UnfoundTownsTests.swift */; };
 		C4EAC80122E3D414004A27B1 /* UnfoundTownsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC80022E3D414004A27B1 /* UnfoundTownsUITests.swift */; };
 		C4EAC81422E423DF004A27B1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EAC81322E423DF004A27B1 /* Player.swift */; };
@@ -44,11 +44,11 @@
 
 /* Begin PBXFileReference section */
 		C420BB2522EE055300E3646B /* Expedition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expedition.swift; sourceTree = "<group>"; };
+		C43D2F74244D225E00BDE459 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C43D2F76244D233E00BDE459 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4EAC7DD22E3D412004A27B1 /* UnfoundTowns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnfoundTowns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4EAC7E022E3D412004A27B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C4EAC7E222E3D412004A27B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C4EAC7E722E3D413004A27B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C4EAC7EA22E3D413004A27B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4EAC7EC22E3D413004A27B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4EAC7F122E3D414004A27B1 /* UnfoundTownsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnfoundTownsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4EAC7F522E3D414004A27B1 /* UnfoundTownsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfoundTownsTests.swift; sourceTree = "<group>"; };
@@ -112,9 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				C4EAC7E022E3D412004A27B1 /* AppDelegate.swift */,
-				C4EAC7E222E3D412004A27B1 /* ViewController.swift */,
+				C43D2F74244D225E00BDE459 /* SceneDelegate.swift */,
 				C4EAC7E722E3D413004A27B1 /* Assets.xcassets */,
-				C4EAC7E922E3D413004A27B1 /* LaunchScreen.storyboard */,
 				C4EAC7EC22E3D413004A27B1 /* Info.plist */,
 				C4EAC81922E94F4D004A27B1 /* Game.swift */,
 				C4EAC81322E423DF004A27B1 /* Player.swift */,
@@ -122,6 +121,7 @@
 				C4EAC81622E4E13C004A27B1 /* UnfoundTownError.swift */,
 				C4F5F37424316E04009F0E59 /* UnfoundTownView.swift */,
 				C4F5F3762431763A009F0E59 /* UnfoundTownCard.swift */,
+				C43D2F76244D233E00BDE459 /* LaunchScreen.storyboard */,
 			);
 			path = UnfoundTowns;
 			sourceTree = "<group>";
@@ -250,8 +250,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4EAC7EB22E3D413004A27B1 /* LaunchScreen.storyboard in Resources */,
 				C4EAC7E822E3D413004A27B1 /* Assets.xcassets in Resources */,
+				C43D2F77244D233E00BDE459 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,9 +278,9 @@
 			files = (
 				C4EAC81422E423DF004A27B1 /* Player.swift in Sources */,
 				C4EAC81A22E94F4D004A27B1 /* Game.swift in Sources */,
+				C43D2F75244D225E00BDE459 /* SceneDelegate.swift in Sources */,
 				C4F5F37524316E04009F0E59 /* UnfoundTownView.swift in Sources */,
 				C420BB2622EE055300E3646B /* Expedition.swift in Sources */,
-				C4EAC7E322E3D412004A27B1 /* ViewController.swift in Sources */,
 				C4EAC7E122E3D412004A27B1 /* AppDelegate.swift in Sources */,
 				C4F5F3772431763A009F0E59 /* UnfoundTownCard.swift in Sources */,
 				C4EAC81722E4E13C004A27B1 /* UnfoundTownError.swift in Sources */,
@@ -321,17 +321,6 @@
 			targetProxy = C4EAC7FD22E3D414004A27B1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		C4EAC7E922E3D413004A27B1 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4EAC7EA22E3D413004A27B1 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C4EAC80322E3D414004A27B1 /* Debug */ = {
@@ -455,6 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N2B9X356ML;
 				INFOPLIST_FILE = UnfoundTowns/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -473,6 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N2B9X356ML;
 				INFOPLIST_FILE = UnfoundTowns/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -492,6 +483,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N2B9X356ML;
 				INFOPLIST_FILE = UnfoundTownsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -512,6 +504,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N2B9X356ML;
 				INFOPLIST_FILE = UnfoundTownsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -531,6 +524,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N2B9X356ML;
 				INFOPLIST_FILE = UnfoundTownsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -550,6 +544,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N2B9X356ML;
 				INFOPLIST_FILE = UnfoundTownsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
